@@ -11,13 +11,16 @@ public class Controller {
     public TextField   fname = new TextField();
     public TextField   param = new TextField();
     public Button      btn1  = new Button();
-    public Label       sText = new Label();
+    public Label       mText = new Label();
     public Label       m1    = new Label();
     public Label       ma    = new Label();
     public TableView   mt    = new TableView();
-    public TableColumn mi    = new TableColumn<>();
-    public TableColumn mn    = new TableColumn<>("?");
-    public TableColumn ml    = new TableColumn<>();
+//    public TableColumn ti    = new TableColumn<>();
+//    public TableColumn tn    = new TableColumn<>("?");
+//    public TableColumn tz    = new TableColumn<>();
+    public ListView     li = new ListView ();
+    public ListView     ln = new ListView ();
+    public ListView     lz = new ListView ();
     @FXML
     public void onChangeFileName() {
         System.out.print("onChangeFileName");
@@ -36,21 +39,20 @@ public class Controller {
         p = param.getText();
         System.out.println(" param " + p +" gelesen");
         if (s.isEmpty()) {
-            sText.setText("kein Dateiname!");
+            mText.setText("kein Dateiname!");
          } else {
-            sText.setText(s + ".txt");
+            mText.setText(s + ".txt");
+            m1.setText("");
             s = trans(s, p);
         }
-        sText.setText(s);
-        if (MID > 0) {
-            ma.setText("es wurden " + MID + " Makros gefunden.");
+        mText.setText(s);
+            ma.setText("es wurden " + mlist.size() + " Makros gefunden.");
             m1.setText("");
-            for (int i = 0; i < MID; i++) {
-                m1.setText(m1.getText() + " " + mlist[i].getName());
-//                mi.setText(toString(mlist[i].getID()));
-//                mn.setText(mlist[i].getName());
-//                mi.setText(mlist[i].getZanz());
-            }
+            for (Cmacro cmacro : mlist) {
+                m1.setText(m1.getText() + " " + cmacro.getName());
+//                li.ssetItems(mlist.get(i).getID());
+//                ln.setItems(mlist.get(i).getName());
+//                lz.setItems(mlist.get(i).getZanz());
         }
     }
 }

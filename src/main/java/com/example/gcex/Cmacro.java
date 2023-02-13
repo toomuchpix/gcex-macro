@@ -13,28 +13,28 @@ public class Cmacro {
         this.ID = ID;
     }
 
-    public int getID() {
-        return ID;
-    }
-    public int getLanz() {
-        return zanz;
-    }
     public String getName() {
         return name;
     }
     public String getCont() {
         return cont;
     }
-
-    public void setZanz(int lanz) { this.zanz = lanz; }
-    public void setID(int ID) {
-        this.ID = ID;
+    public int getZanz() {
+        return zanz;
     }
+    public int getID() {
+        return ID;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
     public void setCont(String cont) {
         this.cont = cont;
+    }
+    public void setZanz(int zanz) { this.zanz = zanz; }
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public void addl(String zeile) {
@@ -44,7 +44,7 @@ public class Cmacro {
     }
 
     public void dump() {
-        System.out.println("Macro " + name + " ID:" + ID + " level:" + zanz);
+        System.out.println("Macro " + name + " ID:" + ID + " Zeilen:" + zanz);
         System.out.println(cont);
     }
 }
