@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class gcew extends Application {
+public class jgcm extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(gcew.class.getResource("gceview.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(jgcm.class.getResource("gceview.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 250, 430);
-        stage.setTitle("G-Code Manager V1.1");
+        stage.setTitle("JGCM: Java G-Code Manager V1.1");
         stage.setScene(scene);
         stage.show();
     }
