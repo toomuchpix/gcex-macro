@@ -3,12 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" prefHeight="488.0" prefWidth="335.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gcex.Controller">
@@ -19,7 +16,7 @@
     <TextField fx:id="param" onAction="#onChangeParams" promptText="params" />
     <Button fx:id="btn1" onAction="#onStartButtonClick" text="starten" />
     <Label fx:id="mText" text="-" />
-    <Label fx:id="m1" text="&lt;M1&gt;" />
+    <Label fx:id="m1" text="-" />
    <TableView prefHeight="25.0" prefWidth="295.0">
      <columns>
          <TableColumn prefWidth="30.0" text="ID" />
@@ -27,15 +24,4 @@
          <TableColumn prefWidth="50.0" text="Zeilen" />
      </columns>
    </TableView>
-   <ScrollPane fx:id="sp" prefHeight="97.0" prefWidth="295.0">
-      <content>
-          <HBox fx:id="hb" prefHeight="100.0" prefWidth="200.0">
-            <children>
-               <ListView fx:id="li" prefHeight="200.0" prefWidth="200.0" />
-               <ListView fx:id="ln" prefHeight="200.0" prefWidth="200.0" />
-               <ListView fx:id="lz" prefHeight="200.0" prefWidth="200.0" />
-            </children>
-          </HBox>
-      </content>
-   </ScrollPane>
 </VBox>
