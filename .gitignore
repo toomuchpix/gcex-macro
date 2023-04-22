@@ -36,3 +36,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/.idea/
+/out/
+/.mvn/
+/.idea/
+/.idea/
+/.idea/
+/.mvn/
+/META-INF/
